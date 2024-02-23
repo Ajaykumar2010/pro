@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio Buttons and Checkboxes Example</title>
+    <style>
+        /* Basic CSS styling */
+        body {
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            background: linear-gradient(to bottom right, #4CAF50, #cdcce3);
+            transition: background 0.5s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            max-width: 400px;
+            padding: 60px;
+            border: 1px solid black;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+        }
+        .container:hover {
+            background: linear-gradient(to bottom right, #71bef4, #4CAF50); /* Updated gradient on hover */
+        }
+        label {
+            display: block;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        input[type="radio"]:checked + label,
+        input[type="checkbox"]:checked + label {
+            color: #fff; /* Change label color when checked */
+        }
+        input[type="radio"]:focus + label,
+        input[type="checkbox"]:focus + label {
+            transform: translateX(5px); /* Move label when input is focused */
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Radio Buttons</h2>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label>
+    <input type="radio" id="other" name="gender" value="other">
+    <label for="other">Other</label>
+
+    <h2>Checkboxes</h2>
+    <input type="checkbox" id="apple" name="fruit" value="apple">
+    <label for="apple">Apple</label>
+    <input type="checkbox" id="banana" name="fruit" value="banana">
+    <label for="banana">Banana</label>
+    <input type="checkbox" id="orange" name="fruit" value="orange">
+    <label for="orange">Orange</label>
+</div>
+</body>
+</html>
